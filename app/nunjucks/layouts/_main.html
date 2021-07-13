@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="global__wrapper">
+		{% block content %}
+			
+		{% endblock %}
+		
+		<script src="js/jquery.js"></script>
+		<script src="js/jquery.fancybox.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/main.js"></script>
+		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+		<script>
+			//Яндекс Карта
+			ymaps.ready(init);
+			var myMapAll;
+		
+			function init() {
+				myMapAll = new ymaps.Map("contacts__map", {
+					center: [55.763356, 49.234954],
+					zoom: 10,
+				});
+				var myPlacemark_1 = new ymaps.Placemark([55.763356, 49.234954], {
+					balloonContentHeader: "Название объекта",
+					balloonContentBody: "Описание объекта",
+					balloonContentFooter: "",
+					hintContent: "Кликните для более подробной информации",
+				});
+				myMapAll.geoObjects.add(myPlacemark_1);
+			}
+			//END Яндекс Карта
+		</script>
+	</div>
+</body>
+</html>

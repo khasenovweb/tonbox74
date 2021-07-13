@@ -1,0 +1,107 @@
+@blue: #1093EA;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Nissan Brand', sans-serif;
+	color: white;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	background-color:black;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+
+.container {
+	max-width: 123rem;
+	padding: 0 3rem;
+	margin: 0 auto;
+}
+
+
+.btn {
+	background-color: @blue;
+	border: none;
+	padding: 2rem 3rem;
+	border-radius: 10rem;
+	font-weight: 800;
+	cursor: pointer;
+	text-transform: uppercase;
+	display: inline-block;
+	font-size: 1.6rem;
+	&:hover {
+		background-color: darken(@blue, 5%);
+	}
+}
+
+
+.sec {
+	padding: 6rem 0;
+	position: relative;
+}
+
+.sec__title {
+	font-size: 4.8rem;
+	position: relative;
+}
+
+.sec__desc {
+	font-size: 1.6rem;
+	margin-top: 2rem;
+	font-weight: 300;
+	opacity: 0.7;
+	line-height: 1.5;
+	position: relative;
+}
+.global__wrapper {
+	overflow-x: hidden;
+}
+
+.overlay {
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(0, 0, 0, 0.6) 0%, #000000 100%)
+    }
+}
+
+@import "_hero.less";
+@import "_services.less";
+@import "_works.less";
+@import "_youtube.less";
+@import "_clients.less";
+@import "_about.less";
+@import "_contacts.less";
+@import "_footer.less";
+
+
+
+@media screen and (max-width: 1500px) {
+	html {
+		font-size: 9.5px;
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	html {
+		font-size: 9px;
+	}
+}

@@ -1,0 +1,62 @@
+.about__content {
+    display: grid;
+    grid-template-columns: 4fr 8fr;
+    grid-gap: 16rem;
+    margin-top: 6rem;
+}
+
+.about__content__img {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.about__content__text {
+    position: relative;
+    p {
+        font-size: 1.6rem;
+        line-height: 1.7;
+        position: relative;
+    }
+    .btn {
+        margin-top: 4rem;
+    }
+}
+.about__content__text__opisanie {
+    position: relative;
+}
+
+.about__content__text__quotes-left {
+    position: absolute;
+    left: -15rem;
+    top: -5rem;
+    width: 11.3rem;
+    height: auto;
+}
+.about__content__text__quotes-right {
+    position: absolute;
+    right: -8rem;
+    bottom: -8rem;
+    width: 11.3rem;
+    height: auto;
+}
+
+.about__content__name {
+    margin-top: 3rem;
+    font-size: 2.6rem;
+    font-weight: bold;
+}
+
+.about__content__role {
+    font-size: 1.6rem;
+    margin-top: 0.5rem;
+    opacity: 0.7;
+}
+
+
+@media screen and (max-width: 1000px) {
+	.about__content__text__opisanie {
+        // width: 90%;
+    }
+}
