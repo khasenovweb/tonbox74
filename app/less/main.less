@@ -35,7 +35,7 @@ li {
 .btn {
 	background-color: @blue;
 	border: none;
-	padding: 2rem 3rem;
+	padding: 2rem 4rem;
 	border-radius: 10rem;
 	font-weight: 800;
 	cursor: pointer;
@@ -61,7 +61,7 @@ li {
 .sec__desc {
 	font-size: 1.6rem;
 	margin-top: 2rem;
-	font-weight: 300;
+	font-weight: 400;
 	opacity: 0.7;
 	line-height: 1.5;
 	position: relative;
@@ -91,6 +91,17 @@ li {
 @import "_about.less";
 @import "_contacts.less";
 @import "_footer.less";
+@import "_mobile-nav.less";
+@import "_modal.less";
+@import "_whatdoyouget.less";
+@import "_brands.less";
+@import "_sertificates.less";
+@import "_reviews.less";
+@import "_prices.less";
+@import "_calc.less";
+@import "_faq.less";
+@import "_etaps.less";
+@import "_center.less";
 
 
 
@@ -103,5 +114,20 @@ li {
 @media screen and (max-width: 1500px) {
 	html {
 		font-size: 9px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+    .btn {
+		font-size: 1.2rem;
+	}
+	.sec__title {
+		font-size: 2.5rem;
+	}
+	.sec__desc {
+		font-size: 1.4rem;
+	}
+	.sec {
+		padding: 3rem 0;
 	}
 }

@@ -1,3 +1,13 @@
+.youtube {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+.youtube__btn {
+    margin-top: 6rem;
+}
 .youtube__header {
     display: flex;
     justify-content: space-between;
@@ -62,4 +72,45 @@
     margin-top: 0.5rem;
     font-size: 1.4rem;
     opacity: 0.7;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .youtube__items {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .youtube__items {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .youtube__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .youtube__header__btn {
+        margin-top: 2rem;
+    }
+    .youtube__items {
+        margin-top: 3rem;
+    }
+    .youtube__item__content__icon {
+        width: 4rem;
+        min-width: 4rem;
+        height: 4rem;
+    }
+    .youtube__item__content__text__title {
+        font-size: 1.4rem;
+    }
+    .youtube__item__content__text__channelname {
+        font-size: 1.2rem;
+    }
+    .youtube__item__content__text__statistic {
+        font-size: 1.2rem;
+    }
 }

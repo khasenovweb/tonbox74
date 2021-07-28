@@ -41,3 +41,29 @@
     border-radius: 20px;
     overflow: hidden;
 }
+
+
+@media screen and (max-width: 900px) {
+    .contacts__content {
+        grid-template-columns: 1fr;
+        grid-gap: 6rem;
+    }
+    .contacts__content__map {
+        height: 30rem;
+    }
+    .contacts__content__main__item__title {
+        font-size: 1.6rem;
+    }
+    .contacts__content__main__item__title.phone {
+        font-size: 2rem;
+    }
+    .contacts__content__main {
+        padding: 0;
+    }
+    .contacts__content__main .btn {
+        margin-top: 3rem;
+    }
+    .contacts__content__main__items {
+        grid-gap: 2rem;
+    }
+}

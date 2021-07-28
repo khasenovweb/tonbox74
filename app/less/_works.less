@@ -10,6 +10,7 @@
 .works__link {
     cursor: pointer;
     margin-right: 2rem;
+    margin-bottom: 2rem;
     input {
         display: none;
         &:checked + .works__link__box {
@@ -51,7 +52,10 @@
 
 
 .works__slider {
-    margin-top: 6rem;
+    margin-top: 4rem;
+    .owl-stage-outer {
+        border-radius: 1rem;
+    }
     .owl-item {
         &.center {
             .works__slider__item__img__text {
@@ -82,6 +86,7 @@
     background-position: center;
     background-size: cover;
     position: relative;
+    border-radius: 1rem;
 }
 .works__slider__item__img__text {
     position: absolute;
@@ -98,6 +103,39 @@
         transition: 0.3s;
         transform: translateY(2rem);
     }
+}
+.works__slider__dots {
+    margin-top: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button.owl-dot {
+        width: 5rem;
+        min-width: 5rem;
+        height: 5rem;
+        background-color: #fff;
+        border: none;
+        opacity: 0.5;
+        margin: .25rem;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: .5rem;
+        &.active {
+            background-color: @blue;
+            opacity: 1;
+        }
+    }
+}
+
+.works__slider__thumbs__item {
+    width: 100%;
+    padding-bottom: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #000;
 }
 
 @media screen and (max-width: 1300px) {
@@ -116,5 +154,32 @@
         button.owl-next {
             right: 6rem;
         }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .works__slider {
+        margin-top: 2rem;
+    }
+    .works__link {
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+    .works__link__box {
+        padding: 1rem 2rem;
+    }
+    .works__link__box__title {
+        font-size: 0.9rem;
+    }
+    .works__slider__dots {
+        button.owl-dot {
+            width: 3rem;
+            min-width: 3rem;
+            height: 3rem;
+        }
+    }
+    .works__slider__item__img__text {
+        padding: 2rem;
+        font-size: 1.4rem;
     }
 }

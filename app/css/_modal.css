@@ -1,0 +1,174 @@
+.modal__wrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start;
+  padding-top: 10rem;
+}
+.modal {
+  background-color: #fff;
+  padding: 5rem;
+  border-radius: 2rem;
+  max-width: 42rem;
+  position: relative;
+}
+.modal .modal__success {
+  display: none;
+}
+.modal .modal__error {
+  display: none;
+}
+.modal.success .modal__content {
+  display: none;
+}
+.modal.success .modal__success {
+  display: block;
+}
+.modal.success .modal__error {
+  display: none;
+}
+.modal.error .modal__content {
+  display: none;
+}
+.modal.error .modal__success {
+  display: none;
+}
+.modal.error .modal__error {
+  display: block;
+}
+.modal input {
+  color: #333;
+}
+.modal__icon {
+  width: 6rem;
+  height: 6rem;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+.modal__icon.success {
+  background-image: url(../img/modal__success.svg);
+}
+.modal__icon.error {
+  background-image: url(../img/modal__error.svg);
+}
+.modal__title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+.modal__desc {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #333;
+}
+.modal__form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+.modal__form input {
+  background-color: #F3EFF9;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 2rem 2.5rem;
+  font-size: 1.4rem;
+}
+.modal__form label.error {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  color: #f77c7c;
+  display: block;
+}
+.modal__form input.error {
+  background-color: rgba(247, 124, 124, 0.24);
+}
+.modal__form__input {
+  width: 100%;
+}
+.modal__form__input input {
+  width: 100%;
+}
+.modal__form__politics {
+  color: #ADA6B9;
+  font-size: 1.3rem;
+}
+.modal__form__politics a {
+  color: #ADA6B9;
+  color: #1093EA;
+}
+.modal__form__politics a:hover {
+  color: #1093EA;
+}
+.modal__close {
+  width: 1.6rem;
+  height: 1.6rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(https://khasenovweb.github.io/cdn/img/modal/modal__close.svg);
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+  cursor: pointer;
+}
+.body_hidden {
+  overflow-y: hidden;
+}
+[data-modal] {
+  display: none;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  overflow-y: auto;
+  padding-bottom: 10rem;
+}
+[data-modal] .modal {
+  -webkit-transform: scale(0.97);
+          transform: scale(0.97);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+[data-modal].active {
+  opacity: 1;
+}
+[data-modal].active .modal {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+@media screen and (max-width: 450px) {
+  .modal {
+    max-width: 90%;
+    padding: 3rem;
+  }
+  .modal__close {
+    right: 0;
+    top: -3rem;
+  }
+  .modal__title {
+    font-size: 2.6rem;
+  }
+}
