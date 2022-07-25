@@ -1,0 +1,143 @@
+@blue: #1093ea;
+@black: #333;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nissan Brand", sans-serif;
+    color: white;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.container {
+    max-width: 123rem;
+    padding: 0 3rem;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: @blue;
+    border: none;
+    padding: 2rem 4rem;
+    border-radius: 10rem;
+    font-weight: 800;
+    cursor: pointer;
+    text-transform: uppercase;
+    display: inline-block;
+    font-size: 1.6rem;
+    &:hover {
+        background-color: darken(@blue, 5%);
+    }
+}
+
+.sec {
+    padding: 6rem 0;
+    position: relative;
+}
+
+.sec__title {
+    font-size: 4.8rem;
+    position: relative;
+}
+
+.sec__desc {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    font-weight: 400;
+    opacity: 0.7;
+    line-height: 1.5;
+    position: relative;
+}
+.global__wrapper {
+    overflow-x: hidden;
+}
+
+.overlay {
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+            50% 50% at 50% 50%,
+            rgba(0, 0, 0, 0.8) 0%,
+            #000000 100%
+        );
+    }
+}
+select {
+    // color: @black;
+    padding: 1.5rem 3rem;
+    padding-right: 5rem;
+    background-color: #1d1d1d;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    option {
+        // color: @black;
+    }
+}
+.select {
+    position: relative;
+    width: max-content;
+}
+.select__arrow {
+    position: absolute;
+    right: 16px;
+    top: 20px;
+}
+
+@media screen and (max-width: 1500px) {
+    html {
+        font-size: 9.5px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    html {
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .btn {
+        font-size: 1.2rem;
+    }
+    .sec__title {
+        font-size: 2.5rem;
+    }
+    .sec__desc {
+        font-size: 1.4rem;
+    }
+    .sec {
+        padding: 3rem 0;
+    }
+}
+
+@import "partials/_header.less";
+@import "partials/_fonts.less";
+@import "partials/_hero.less";
+@import "partials/_center.less";

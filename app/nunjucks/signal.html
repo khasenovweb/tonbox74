@@ -4,14 +4,54 @@
 
 {% block content %}
 
-
+<!-- ========================== header ===================================-->
+<section class="header">
+        <div class="hero__navbar">
+            <div class="container">
+                <a href="" class="hero__navbar__logo">
+                    <img src="img/logo.svg" alt="">
+                </a>
+                <ul class="hero__navbar__nav">
+                    <li>
+                        <a href="/">
+                            <img src="img/nav.svg" alt="">
+                            <span>Услуги</span>
+                       </a>
+                       <div class="hero__navbar__nav__submenu">
+                           <div class="hero__navbar__nav__submenu__links">
+                               <a href="/" class="hero__navbar__nav__submenu__link">Установка сигнализации</a>
+                               <a href="/" class="hero__navbar__nav__submenu__link">Тонирование</a>
+                           </div>
+                       </div>
+                    </li>
+                    <li>
+                        <a href="/">О компании</a>
+                    </li>
+                    <li>
+                        <a href="/">Контакты</a>
+                    </li>
+                </ul>
+                <div class="hero__navbar__phoneblock">
+                    <div class="hero__navbar__phoneblock__top">
+                        <img src="img/phone.svg" alt="">
+                        <a href="tel:+7 (982) 316-6424">+7 (982) 316-6424</a>
+                    </div>
+                    <div class="hero__navbar__phoneblock__bottom">ежедневно с 9:00 до 20:00</div>
+                </div>
+                <div class="hero__navbar__hamburger" data-hamburger="1">
+                    <div class="hero__navbar__hamburger__icon"></div>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- ========================== header ===================================-->
 <!-- ========================== hero ===================================-->
 <section class="hero">
     <div class="hero__overlay" style="background-image: url(img/hero.jpg);"></div>
     <input type="hidden" data-hero-slide value="img/hero.jpg">
     <input type="hidden" data-hero-slide value="img/works.jpg">
     <input type="hidden" data-hero-slide value="img/client.jpg">
-    <div class="hero__navbar">
+    <!-- <div class="hero__navbar">
         <div class="container">
             <a href="" class="hero__navbar__logo">
                 <img src="img/logo.svg" alt="">
@@ -47,7 +87,7 @@
                 <div class="hero__navbar__hamburger__icon"></div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="hero__main">
         <div class="container">
             <h1 class="hero__title">
@@ -256,6 +296,9 @@
 </section>
 <!-- =================================== END reviews ===================================-->
 
+
+
+
 <!-- =================================== prices ===================================-->
 <section class="prices sec">
     <div class="container">
@@ -283,7 +326,17 @@
         <div class="calc__items">
             <div class="calc__item">
                 <div class="calc__item__label">Марка авто</div>
-                <div class="calc__item__checkboxs">
+                <div class="select">
+                    <select name="" id="">
+                        <option value="" selected disabled>Выберите марку авто</option>
+                        <option value="Audi">Audi</option>
+                        <option value="Audi">BMW</option>
+                        <option value="Audi">Chery</option>
+                    </select>
+                    <img src="img/select__arrow.svg" alt="" class="select__arrow">
+                </div>
+                <!-- <div class="calc__item__checkboxs">
+                    
                     <label for="works__link-1" class="works__link calc__item__checkbox">
                         <input name="works__link__markaauto" type="radio" id="works__link-1" value="all" checked>
                         <div class="works__link__box">
@@ -311,7 +364,7 @@
                             <div class="works__link__box__title">Chery</div>
                         </div>
                     </label>
-                </div>
+                </div> -->
             </div>
             <div class="calc__item">
                 <div class="calc__item__label">Бренд сигнализации</div>
@@ -360,9 +413,15 @@
                 </div>
             </div>
         </div>
-        <div class="calc__result">
+        <div class="calc__result active">
             <div class="calc__result__price">12 000 ₽</div>
             <button class="calc__result__btn btn" data-modal-show="4">Записаться на установку</button>
+        </div>
+        <div class="calc__noresult">
+            <div class="calc__noresult__title">
+                Стоимость установки на Audi, BMW, Land Rover, Jaguar  уточняйте по телефону: <br> <a href="tel:+7 (982) 316-6424">+7 (982) 316-6424</a>
+            </div>
+            <button class=" btn" data-modal-show="1">Бесплатная консультация</button>
         </div>
     </div>
 </section>

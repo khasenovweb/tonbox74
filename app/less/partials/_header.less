@@ -1,0 +1,20 @@
+.header {
+  position: relative;
+  z-index: 1;
+  &.headhesive {
+    background-color: black;
+    transform: translateY(-100%);
+    z-index: 3;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    transition: 0.3s;
+    .hero__navbar {
+      padding: 1.5rem 0;
+    }
+  }
+  &.headhesive--stick {
+    transform: translateY(0);
+  }
+}

@@ -1,20 +1,39 @@
+// ===============================//
+// ============= Libs ===========//
+// ==============================//
+@@include('libs/jquery.js')
+@@include('libs/jquery.fancybox.min.js')
+@@include('libs/owl.carousel.min.js')
+@@include('libs/mask.js')
+@@include('libs/mask-phone.js')
+@@include('libs/headhesive.js')
+@@include('libs/parallax.min.js')
+@@include('libs/validate.js')
+@@include('libs/scroll.js')
+@@include('libs/modal.js')
+@@include('libs/typed.min.js')
+@@include('libs/gsap.min.js')
+// ==============================//
+// =========== END Libs ===============//
+// ==============================//
+ 
 $(document).ready(function(){
     //========= Показываем и скрываем подменю ======//
-    $('.hero__navbar__nav li').mouseenter(function(){
-        var thisvar = $(this);
-        thisvar.find('.hero__navbar__nav__submenu').show();
-        setTimeout(function(){
-            thisvar.find('.hero__navbar__nav__submenu').addClass('active');
-        }, 10);
+    // $('.hero__navbar__nav li').mouseenter(function(){
+    //     var thisvar = $(this);
+    //     thisvar.find('.hero__navbar__nav__submenu').show();
+    //     setTimeout(function(){
+    //         thisvar.find('.hero__navbar__nav__submenu').addClass('active');
+    //     }, 10);
         
-    });
-    $('.hero__navbar__nav li').mouseleave(function(){
-        var thisvar = $(this);
-        thisvar.find('.hero__navbar__nav__submenu').removeClass('active');
-        setTimeout(function(){
-            thisvar.find('.hero__navbar__nav__submenu').hide();
-        }, 310);
-    });
+    // });
+    // $('.hero__navbar__nav li').mouseleave(function(){
+    //     var thisvar = $(this);
+    //     thisvar.find('.hero__navbar__nav__submenu').removeClass('active');
+    //     setTimeout(function(){
+    //         thisvar.find('.hero__navbar__nav__submenu').hide();
+    //     }, 310);
+    // });
     //========= Показываем и скрываем подменю ======//
 
     //========= Показываем и скрываем панель ======//
@@ -73,7 +92,7 @@ function work__slider__init() {
         URLhashListener:true,
         startPosition: 'URLHash',
         dotsContainer: ".works__slider__dots",
-        navText: ["<img src=\"img/arrow-left.svg\">","<img src=\"img/arrow-right.svg\" >"],
+        navText: ["<img src=\"/static/index/img/arrow-left.svg\">","<img src=\"/static/index/img/arrow-right.svg\" >"],
         responsive: {
             0: {
                 items: 1,
@@ -87,7 +106,7 @@ function work__slider__init() {
 
     // thumbnails
     $('.works__slider .owl-item').not('.cloned').each(function(i, el){
-        var href = $(el).find('.works__slider__item__img').attr('href');
+        var href = $(el).find('.works__slider__item__img').attr('data-thumb');
         $('.works__slider__dots .owl-dot').eq(i).css('background-image', 'url('+href+')');
     });
     // END thumbnails
@@ -114,7 +133,11 @@ work__slider__init();
     var animation = gsap.to(".hero__overlay", {duration: 15, scale: 1.5, ease: "linear"});
     setInterval(function(){
         animation.restart();
-        var url = $('[data-hero-slide]').eq(i).val();
+        if( $(window).width() <= '700' ) {
+            var url = $('[data-hero-slide-mobile]').eq(i).val();
+        } else {
+            var url = $('[data-hero-slide]').eq(i).val();
+        }
         $('.hero__overlay').css('background-image', 'url('+url+')');
         console.log(url);
 
@@ -191,7 +214,7 @@ work__slider__init();
         items: 1,
         nav: true,
         loop: true,
-        navText: ["<img src=\"img/arrow-left.svg\">","<img src=\"img/arrow-right.svg\" >"],
+        navText: ["<img src=\"/static/index/img/arrow-left.svg\">","<img src=\"/static/index/img/arrow-right.svg\" >"],
         dotsContainer: ".reviews__slider__dots",
         responsive: {
             0: {
@@ -210,8 +233,4 @@ work__slider__init();
         if ($(event.target).closest("[data-faq-content]").length) return;
         $(this).find('[data-faq-content]').slideToggle(300);
     });
-
 });
-
-
-
